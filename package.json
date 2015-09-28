@@ -1,0 +1,19 @@
+{
+  "name": "bridgepi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/roche-d/bridgepi.git"
+  },
+  "author": "roche-d",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/roche-d/bridgepi/issues"
+  },
+  "homepage": "https://github.com/roche-d/bridgepi#readme"
+}
