@@ -9,6 +9,7 @@
         app.post('/giveip', raspberry.add);
 
         app.get('/cse/status', cse.status);
+        app.post('/cse/status', cse.add);
     }
 })
 ();

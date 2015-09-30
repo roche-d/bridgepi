@@ -4,25 +4,14 @@ var CSE;
     'use strict';
 
     if (CSE) {
-        console.log('cse exists');
     } else {
-        console.log('cse new');
         CSE = {
-            logs: [
-                {
-                    status: "AVAILABLE",
-                    date: Date.now()
-                },
-                {
-                    status: "AVAILABLE",
-                    date: Date.now()
-                }
-            ]
+            logs: []
         }
     }
 
     exports.status = function (req, res) {
-        console.log('cse status');
+        //console.log('cse status');
         res.send({
             res: true,
             data: CSE.logs
@@ -30,7 +19,17 @@ var CSE;
     };
 
     exports.add = function(req, res) {
-        console.log('add a log');
+        //console.log('add a log');
+        if (req.body && req.body.status) {
+            if (CSE.logs.length >= 5) CSE.logs.splice(0, 1);
+            CSE.logs.push({
+                date: Date.now(),
+                status: req.body.status
+            });
+        }
+        res.send({
+            res: true
+        });
     };
 
 })

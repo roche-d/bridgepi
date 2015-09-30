@@ -4,7 +4,7 @@
     let fs = require('fs');
 
     exports.list = function (req, res) {
-        console.log('list required');
+        //console.log('list required');
 
         fs.readFile('raspberries', ((err, data) => {
             if (err) {
@@ -26,8 +26,8 @@
     };
 
     exports.add = function (req, res) {
-        console.log('new client');
-        console.log(req.body);
+        //console.log('new client');
+        //console.log(req.body);
         res.send({
             res: true
         });
